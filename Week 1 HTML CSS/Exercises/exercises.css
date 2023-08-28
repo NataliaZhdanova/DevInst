@@ -1,0 +1,135 @@
+.external {
+    text-decoration: underline; 
+    font-style: italic;
+}
+
+.both {
+    text-decoration: overline; 
+    font-style: normal;
+}
+
+.green-frame-orig {
+    display: block;
+    margin-bottom: 10px;
+
+    background-color: #C0F7D7;
+    border-color: #27C76B;
+    border-style: ridge;
+    padding: 30px;
+
+    font-family: gotham-rounded, helvetica neue, helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #29303b;
+    text-align: left;
+}
+
+.green-frame-v1 {
+    display: block;
+    margin-bottom: 10px;
+
+    background-color: #C0F7D7;
+    border-color: #27C76B;
+    border-style: dotted;
+    padding: 30px;
+
+    font-family: gotham-rounded, helvetica neue, helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #29303b;
+    text-align: left;
+}
+
+.green-frame-v2 {
+    display: block;
+    margin-bottom: 10px;
+
+    background-color: #C0F7D7;
+    border-color: #27C76B;
+    border-style:groove;
+    box-shadow: #8f8f8f 10px 10px 20px;
+    padding: 30px;
+
+    font-family: gotham-rounded, helvetica neue, helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #29303b;
+    text-align: left;
+}
+
+.green-frame-flag {
+    display: flex;
+    margin-bottom: 10px;
+
+    background-color: #C0F7D7;
+    border-color: #27C76B;
+    border-style: ridge;
+    padding: 30px;
+}
+
+.blue {
+    background-color: rgb(25, 25, 119);
+    width: 19px;
+    height: 34px;
+}
+.white {
+    background-color: white;
+    width: 19px;
+    height: 34px;
+}
+.red {
+    background-color: red;
+    width: 19px;
+    height: 34px;
+}
+
+.pink-white {
+    background-color: rgb(248, 165, 179);
+    color: white;
+}
+
+.light-blue-pm {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 5px;
+}
+
+.up-bold {
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+#blue-li {
+    color: blue;
+
+}
+/* Exercise 8 */
+
+.grey {
+    background-color: rgb(210, 210, 216);
+    width: 300px;
+    height: 100px;
+    border: solid rgba(255, 255, 255, 0.7);
+    box-shadow: inset rgba(167, 166, 166, 0.7) 5px 5px 20px;
+}
+.light-blue {
+    background-color: rgb(151, 208, 255);
+    width: 90px;
+    height: 90px;
+    position: relative;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+.orange {
+    background-color: rgb(248, 173, 10);
+    width: 90px;
+    height: 90px;
+
+    position: relative;
+    margin-top: -86px;
+    margin-left: 5px;
+}
