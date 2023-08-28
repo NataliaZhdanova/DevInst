@@ -11,7 +11,7 @@ align-items: center;
 
 /* HEADER */
 .header {
-	background-image: url(/Admission\ Project/images/header-bg.png);
+	background-image: url(/Admission_Project/images/header-bg.png);
  	width: 1299px;
     height: 169px;
 	background-color: rgba(22, 11, 1, 0.5);
@@ -96,7 +96,7 @@ align-items: center;
 /* MAIN -> HERO */
 
 #hero {
-	background-image: url(/Admission\ Project/images/main-bg.png);
+	background-image: url(/Admission_Project/images/main-bg.png);
  	width: 1299px;
     height: 872px;
     background-repeat: no-repeat;
