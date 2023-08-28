@@ -1,0 +1,405 @@
+body {
+    background: #eeeeee;
+}
+
+.center {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+/* HEADER */
+.header {
+	background-image: url(/Admission\ Project/images/header-bg.png);
+ 	width: 1299px;
+    height: 169px;
+	background-color: rgba(22, 11, 1, 0.5);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    position: static;
+    top: 0;
+    display: block;
+}
+
+.header-text {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    top: 30px;    
+}
+
+.header-subtext {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    top: 30px;  
+    }
+
+/* NAVIGATION BAR */    
+
+.navigation {
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 1299px;
+    height: 50px;
+	background-color: rgb(172, 8, 8);
+	color: #ffffff;
+	font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    overflow: visible;
+}
+
+
+.menu {
+    text-align: center;
+    position: relative;
+    top: 12px;  
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #fff;
+	padding: 12px 20px 14px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.navigation a:hover {
+	color: #3a0404;
+	background-color: #fff;
+}
+
+
+/* MAIN */   
+
+.main {
+
+	background-color: rgba(32, 30, 31);
+    position: static;
+    width: 1299px;
+    top: 50px; 
+}
+
+/* MAIN -> HERO */
+
+#hero {
+	background-image: url(/Admission\ Project/images/main-bg.png);
+ 	width: 1299px;
+    height: 872px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-title {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+	top: 60px;
+	left: 40px;
+}
+
+.hero-subtitle {
+    color: rgb(212, 23, 23);
+    font-size: 34px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+	top: 150px;
+	left: 40px; 
+	font-weight: 700;
+    }
+
+
+.hero-citation1 {
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+	top: 400px;
+	left: 40px; 
+    }
+
+.hero-citation2 {
+    color: rgb(212, 23, 23);
+    font-size: 60px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 490px;
+    left: 40px;
+    }
+
+/* MAIN -> RECIPES */
+
+#recipes-header {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: relative;
+        top: 10px;
+        width: 1279px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-top: 30px;
+}
+
+.recipes-title {
+    color: rgb(212, 23, 23);
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+#recipes {
+    display: flex;
+	flex-direction: column;
+	background: #fff;
+    position: relative;
+    top: 0px;
+    width: 1279px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.loin, .eggs {
+    color: rgb(32, 30, 31);
+    font-family: 'Lato', sans-serif;
+    position: relative;
+	left: 18px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;    
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 12px;
+	border: 2px dotted grey;
+    margin-bottom: 20px;
+}
+
+
+.loin-text, .eggs-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 40px;
+    }
+
+.loin img, .eggs img {
+	border-radius: 10%;
+}
+
+.loin p, .eggs p {
+	display: block;
+    width: 800px;
+	font-size: 16px;
+}
+
+.loin strong, .eggs strong {
+    font-size: 18px;
+}
+
+.loin li, .eggs li {
+    margin-right: 30px;
+}
+
+/* MAIN -> BIBLIOGRAPHY */
+
+#bib-header {
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    position: relative;
+    top: 2px;
+    width: 1279px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.bib-title {
+color: rgb(212, 23, 23);
+font-size: 40px;
+font-family: 'Lato', sans-serif;
+text-align: center;
+}
+
+#bibliography {
+display: flex;
+flex-direction: column;
+background: #f2f2f2;
+position: relative;
+top: 0px;
+width: 1279px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.harris, .poon {
+    color: rgb(32, 30, 31);
+    font-family: 'Lato', sans-serif;
+    position: relative;
+	left: 18px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;    
+	background-color: #fff;
+	padding: 20px;
+	border: 2px solid grey;
+    box-shadow: 5px 10px 14px rgb(81, 82, 82, 0.4);
+    margin-bottom: 20px;
+}
+
+.books-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 40px;
+    }
+
+.harris p, .poon p {
+	display: block;
+    width: 800px;
+	font-size: 16px;
+}
+
+.harris a, .poon a {
+    color: rgb(212, 23, 23);
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h4 {
+    color: rgb(212, 23, 23);
+}
+
+/* MAIN -> FILMOGRAPHY */
+
+#film-header {
+    display: flex;
+    flex-direction: column;
+    background: rgb(32, 30, 31);
+    position: relative;
+    top: 2px;
+    width: 1279px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.film-title {
+color: rgb(212, 23, 23);
+font-size: 40px;
+font-family: 'Lato', sans-serif;
+text-align: center;
+}
+
+#filmography {
+background: rgb(32, 30, 31);
+position: relative;
+top: 0px;
+width: 1279px;
+margin-right: 10px;
+margin-left: 10px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-family: 'Lato', sans-serif;
+}
+
+
+.column-left, .column-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 488px;
+	padding: 20px;
+	margin: 18px 0;
+}
+
+.movie {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin: 20px 10px;
+	border: 2px solid rgb(212, 23, 23);
+	width: 428px;
+    height: 250px;
+    
+}
+
+.film-description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+}
+
+.movie:hover {
+    box-shadow: 0 0 20px 10px rgb(212, 23, 23, 0.5);
+}
+
+.movie img {
+	height: 150px;
+}
+
+.f-title {
+    color:rgb(212, 23, 23);
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    width: 1299px;
+    height: 60px;
+	background-color: rgb(172, 8, 8);
+	color: #ffffff;
+	font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer p {
+    position: relative;
+    left: 30px;
+
+}

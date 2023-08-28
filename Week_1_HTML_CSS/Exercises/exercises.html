@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercises Week 1 - HTML and CSS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='exercises.css'>
+    <script src="https://kit.fontawesome.com/ad4d34166e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<!-- Exercise 1: Create a structured HTML file. Write about yourselves : your name, age, birthdate and why you decided to learn to code. 
+    Style this small text with paragraph, headings, italic and bold characters.-->
+
+ <h1>27/08/23</h1>
+ <br>
+ <hr>
+ <h2>Exercise 1:</h2>   
+<p class="label-name"><strong>Name:</strong> <span class="full-name">Natalia Zhdanova</span></p>
+<p class="label-age"><strong>Age:</strong> <span class="age">42</span></p>
+<p class="label-dob"><strong>Date of birth:</strong> <span class="dob">14/08/1981</span></p>
+<p class="label-learning-goals"><strong>My learning goals:</strong></p>
+<p class="learning-goals"><em>
+    The job market in my previous profession has shrunk due to the economic crisis. 
+    <br> As a result, I decided to change my career to an area that is less impacted by the crisis. 
+    <br> Moreover, as a full-stack developer, you'll never face the issue of being overqualified.
+    </em>
+</p>
+<br>
+<hr>
+
+<!-- Exercise 2: Work on the HTML file you previoulsy created. Make ordered and unordered lists of the things you love to do, to eat, etc ... Don't forget to style it a bit.
+    Create also links to your social media profile. Use image and icons to make these links more userfriendly.-->
+
+<h2>Exercise 2:</h2>
+
+<ol class="ordered-list"><h4><em>Things I like to do:</em></h4>
+    <li>Solving challenges</li>
+    <li>Giving advice</li>
+        <ul class="nested-list">
+            <li>For free</li>
+            <li>On a paid basis</li>
+        </ul>
+    <li>Explaining complex topics in simple words</li>
+</ol>
+
+<ul class="unordered-list"><h4><em>Things I do in my free time:</em></h4>
+    <li>Socks knitting</li>
+    <li>Leather crafting</li>
+    <li>Vocational and recreational reading</li>
+</ul>
+
+<br>
+
+<h3>My social media profiles:</h3>
+
+<table border="1px">
+    <tr>
+        <th>Logo</th>
+        <th>Social Media</th>
+        <th>Profile</th>
+    </tr>
+    <tr>
+        <td><i class="fa-brands fa-linkedin"></i></td>
+        <td>LinkedIn</td>
+        <td><a href src="https://www.linkedin.com/in/natalia-zhdanova/" target="_blank">My LinkedIn profile</a></td>
+    </tr>
+    <tr>
+        <td><i class="fa-brands fa-square-facebook"></i></td>
+        <td>Facebook</td>
+        <td><a href src="https://www.facebook.com/profile.php?id=61550603047201" target="_blank">My Facebook profile</a></td>
+    </tr>
+</table>
+<br>
+<hr>
+
+<!--Exercise 3: Work on the HTML file you previously created. Create a table with 3 columns and 4 rows. The first row should be the headers (i.e., the title of each column).
+    The first column should display 3 projects that you would like to create here at Developers Institute. 
+    The second column should display your 3 best skills in life. 
+    The third column should display your 3 hobbies.
+    Try to style the table with CSS (Hint: Check out "Inline CSS Table Borders" on Google)
+    Display a quote that represents you the best
+-->
+
+<h2>Exercise 3:</h2>
+
+<h3>A styled table:</h3>
+
+<table border="1px" style="border-collapse:collapse;">
+    <tr>
+        <th style="padding:5px;">3 Projects I'd like to create</th>
+        <th style="padding:5px;">My 3 best skills in life</th>
+        <th style="padding:5px;">My 3 hobbies</th>
+    </tr>
+    <tr>
+        <td style="padding:5px;">An app for local food activists and volunteers that allow collecting and sharing information about food remnants and organizing a pick-up or delivery.</td>
+        <td style="padding:5px;">The ability to understand pains and needs of various forms of intelligent life.</td>
+        <td style="padding:5px;">Socks knitting</td>
+    </tr>
+    <tr>
+        <td style="padding:5px;">A chat bot for people looking for free food in their area.</td>
+        <td style="padding:5px;">The ability to question everything.</td>
+        <td style="padding:5px;">Leather crafting</td>
+    </tr>
+    <tr>
+        <td style="padding:5px;">A chat bot for people offering / looking for free gigs in the high-tech field - to help students do smth meaningful or business-related for their portfolios.</td>
+        <td style="padding:5px;">The ability to explain complex topics in simple words</td>
+        <td style="padding:5px;">Vocational and recreational reading</td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<h3>A simple form:</h3>
+
+
+<form>
+    <table>
+        <tr>
+            <td><label>Username:</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align:right;"><input type="submit" value="Submit"></td>
+        </tr>
+    </table>  
+</form>
+<br>
+<hr>
+
+<!--Exercise 4: Create a stuctured HTML file. Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.
+
+Hello Everyone, Congratulation on your first day of coding at DevelopersInstitute
+
+What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet?-->
+
+<h2>Exercise 4:</h2>
+
+<h3>Internal styling with Inline CSS:</h3>
+
+<p style="text-decoration: underline; font-style: italic;">
+    Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+</p>
+
+<h3>Styling with a CSS stylesheet:</h3>
+
+<p class="external">
+    Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+</p>
+
+<h3>Styling with both:</h3>
+
+<p style="text-decoration: underline; font-style: italic;" class="both">
+    Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+</p>
+<p>(The inline styling has a priority over the CSS styling.)    
+</p>
+<br>
+<hr>
+
+<!--Exercise 5: On the same HTML file, recreate the green square of the Exercise 4, using margin, padding and borders.
+    Try different types of borders and shadows (Check it on Google).-->
+
+<h2>Exercise 5:</h2>
+
+<div class="green-frame-orig">
+    <p>
+        Create a stuctured HTML file. Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.
+    </p>
+    <p class="external">
+        Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+    </p>
+    <p>
+        What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet?
+    </p>
+</div>
+<div class="green-frame-v1">
+    <p>
+        Create a stuctured HTML file. Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.
+    </p>
+    <p class="external">
+        Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+    </p>
+    <p>
+        What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet?
+    </p>
+</div>
+<div class="green-frame-v2">
+    <p>
+        Create a stuctured HTML file. Copy this paragraph and style it with Inline CSS first and then with a CSS stylesheet.
+    </p>
+    <p class="external">
+        Hello everyone! Congratulations on your first day of coding at DevelopersInstitute!
+    </p>
+    <p>
+        What happens if you style this paragraph both with Inline CSS and with a CSS stylesheet?
+    </p>
+</div>
+<br>
+<hr>
+
+<!--Exercise 6: On the same HTML file, recreate this flag with the display property (vertical blue-white-red stripes).-->
+
+<h2>Exercise 6:</h2>
+
+<div class="green-frame-flag">
+    <div class="blue"></div>
+    <div class="white"></div>
+    <div class="red"></div>
+</div>
+<br>
+<hr>
+
+<!--Exercise 7: On the same HTML file, copy the code and do the following steps:
+1.Change the second li of the 1st div to blue
+2.Make all the li of the first div in uppercase and in bold
+3.Change the 1st paragraph of the second div so its background color will be pink and its color white
+4.Make the 2nd paragraph of the second div with a background color light blue, with padding and margin
+
+Bonus: Try to find a few ways to achieve each of the steps
+-->
+
+<h2>Exercise 7:</h2>
+
+<div>
+    <ul class="up-bold">
+        <li>What is Lorem Ipsum?</li>
+        <li id="blue-li">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </li>
+        <li>when an unknown printer took a galley of type and scrambled it to make a type specimen book. </li>
+    </ul>
+</div>
+<div>
+    <p class="pink-white">It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+    <ol>
+        <li> remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets </li>
+    </ol>
+    <p class="light-blue-pm"> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<br>
+<hr>
+
+<!--Exercise 8: On the same HTML file, recreate this image with the position property. 
+    The elements are : a parent box (grey), a blue box and an orange box.
+-->
+
+<h2>Exercise 8:</h2>
+
+<div class="green-frame-flag">
+    <div class="grey">
+        <div class="light-blue"></div>
+        <div class="orange"></div>
+    </div>
+</div>
+
+</body>
+</html>
