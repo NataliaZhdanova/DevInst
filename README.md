@@ -1,2 +1,0 @@
-# DevInst
-Developers Institute Projects
