@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shopping Website</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='/Week_1_HTML_CSS/Day_02/Exercises/xp-shop-ws.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+<!--In this exercise, use all the knowlegde you have accumulated on CSS until now, along with all the properties we have learned as well (display, margin/padding, position, etc.) 
+    to create a shopping website. Don’t use Grid or Flexbox, only Basic CSS-->
+
+<!--The navbar should contain:
+- The icon of your website. The icon should be positioned on the left.
+- The link to the products.html file. The link should be positioned on the right. (Use <a> tag.)
+
+Use the CSS properties: display, position, margin and padding.-->
+
+<!-- Create a footer displaying the current year and the name of the developer.-->
+
+<header class="header">
+    <div class="product-link">
+        <a href src="/Week_1_HTML_CSS/Day_02/Exercises/products.html" class="prod-link-text">MY PRODUCTS</a>
+    </div>
+    <div class="login-signin">
+        <a href src="/Week_1_HTML_CSS/Day_02/Exercises/login.html" class="login-link-text">LOGIN / SIGN IN</a>
+    </div>
+</header>
+
+<main class="main">
+
+<!--INTRO TEXT-->
+<div class="logo">
+    <i class="fa-solid fa-crown fa-2xl" style="color: gold;"></i>
+</div>
+<div class="intro-text">
+    <p class="very-big-text">
+        OLD HAG's SWAG
+    </p>
+    <p class="big-text">
+        Leather Goods and Knitwear for LARPers and Reenactors
+    </p>
+    <p class="small-text">
+        >> Based on archeological sources and historical images << <br><br>
+        >> Crafted from natural materials << <br><br>
+        >> Handmade <<
+    </p>
+</div>
+
+<!--PRODUCT CARDS-->
+
+<div class="prod-cards">
+    <div class="prod-group-card">
+        <img src="/Week_1_HTML_CSS/Day_02/Exercises/images/nb-socks.png" class="card-img">
+        <p class="card-header">Socks & Mittens</p>
+        <p class="card-text">Made from 100% sheep wool, in the naalbinding technique, and with a wooden needle</p>
+    </div>
+    <div class="prod-group-card">
+        <img src="" alt="bags">
+        <p class="card-header">Leather Bags & Accessories </p>
+        <p class="card-text">Crafted by hand, from real leather</p>
+    </div>
+    <div class="prod-group-card">
+        <img src="" alt="turnshoes">
+        <p class="card-header">Leather Turnshoes and Boots</p>
+        <p class="card-text">Crafted using authentic patterns and technologies, from real leather</p>
+    </div>
+</div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>© 2023 Natalia Zhdanova</p>
+    </div>
+</footer>
+    
+</body>
+
+</html>
