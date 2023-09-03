@@ -36,9 +36,33 @@
 # Please write an program that asks the user for the number of people attending their wedding and prints the corresponding price in the console.
 # For example, if the user says that 20 people are attending to the wedding, it must cost $4,000 dollars.
 
-a = int (input("What is your height in inches?\n"))
-b = a * 2.5
-if b > 145 :
-    print("Ok, you're tall enough to ride!")
+a = str (input("Please provide a random string of characters...\n"))
+b = len(a)
+if b > 10 :
+    print("The string is too long!")
+elif b < 10 :
+    print("The string is too short!")
 else :
-    print("Well, dear, you need to grow some more to ride.")
+    print("That's a perfect string!")
+    print("The first character is", a[0])
+    print("The last character is", a[-1])
+
+#printing from 1 sympol to 10 symbols
+
+n = 1
+for x in a :
+    print(a[:n])
+    n = n + 1
+    if x == a[:9] :
+        break
+
+#Shuffling and printing shuffled
+
+import random
+
+z = list(a)
+random.shuffle(z)
+
+my_string = "".join(str(element) for element in z)
+print(my_string)
+
