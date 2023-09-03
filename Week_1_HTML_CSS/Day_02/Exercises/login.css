@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    /* HEADER */
+
+.header {
+    background-color: rgb(22, 1, 1); 
+    width: 100%;
+    border-bottom: solid 2px rgb(218, 165, 32, 0.5);
+    position:fixed;
+    top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 99;
+}
+
+.home-link {
+    margin-left: 30px;
+    margin-right: 800px;    
+    display: inline;
+    
+
+}
+
+.products {
+    margin-right: 30px;
+    margin-left: 890px; 
+    display: inline;
+    
+}
+
+.home-link-text {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.products-link-text {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/*MAIN*/
+
+.main {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/img-bg-shop.jpg');
+    background-size: cover;
+    background-position-y: -250px;
+    background-position-x: -10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+
+}
+
+.left-part {
+
+    width: 50%; 
+    margin-top: 66px;
+}
+
+.right-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 66px;
+    padding-left: 30px;
+    width: 50%;
+    color: rgb(20, 114, 17);
+    background-color: rgb(198, 214, 165);
+    }
+
+/*FORM TITLE*/
+
+.intro-text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+
+    margin-top: 30px;
+}
+
+/* INPUT FIELD */
+
+.form-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.very-big-text {
+    margin-bottom: 30px;
+}
+
+.signup-input {
+margin-left: auto;
+margin-right: auto;
+}
+
+.login-signup-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    height: 60px;
+    text-decoration: none;
+}
+
+.signup-select-btn {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    width: 300px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgb(198, 214, 165);
+    color: rgb(20, 114, 17);
+    border: solid 2px rgb(20, 114, 17);  
+}
+
+.signup-select-btn:hover {
+    background-color: rgb(20, 114, 17);
+    color: rgb(243, 243, 243);
+    cursor: pointer;
+    border-left-color: rgb(198, 214, 165);
+}
+
+.login-select-btn {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-left: 15px; 
+    padding-right: 15px;
+    width: 300px;  
+    border-top-left-radius: 6px; 
+    border-bottom-left-radius: 6px;
+    background-color: rgb(20, 114, 17);
+    color: rgb(243, 243, 243);
+    border: solid 2px rgb(20, 114, 17); 
+}
+
+.input-field {
+    width: 600px;
+    height: 60px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(243, 243, 243);
+    padding: 0px;
+    padding-left: 20px;
+    font: inherit;
+    outline: none;
+    transition: all 0.3s;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.input-field:hover {
+    background-color: white;    
+    cursor: pointer;
+}
+
+.input-field:focus {
+    background-color: white;  
+}
+
+
+.submit-btn {
+    width: 600px;
+    height: 60px;
+    background-color: rgb(198, 214, 165);
+    color: rgb(20, 114, 17);
+    border: solid 2px rgb(20, 114, 17);
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    transition: all 0.3s;
+    margin-bottom: 300px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(20, 114, 17);
+    color: rgb(243, 243, 243);
+    cursor: pointer;
+
+}
+
+
+
+/*FOOTER*/
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    
+    background-color: rgb(22, 1, 1); 
+    width: 100%;
+    border-top: solid 2px rgb(218, 165, 32, 0.5);
+
+    color: wheat;
+    text-align: right;
+    font-size: 20px;
+
+}
+
+.footer-text {
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

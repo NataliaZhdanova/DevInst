@@ -1,0 +1,251 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+/* HEADER */
+
+.header {
+    background-color: rgb(22, 1, 1); 
+    width: 100%;
+    border-bottom: solid 2px rgb(218, 165, 32, 0.5);
+    position:fixed;
+    top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 99;
+}
+
+.home-link {
+    margin-left: 30px;
+    margin-right: 800px;    
+    display: inline;
+    
+
+}
+
+.login-signin {
+    margin-right: 30px;
+    margin-left: 810px; 
+    display: inline;
+    
+}
+
+.home-link-text {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.login-link-text {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/*MAIN*/
+
+.main {
+    background-color: rgb(198, 214, 165);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*INTRO TEXT*/
+
+.intro-text {
+    text-align: center;
+    position: relative;
+    top: 110px;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(20, 114, 17);
+}
+
+/*PRODUCT CARDS*/
+
+.prod-cards {
+    margin-top: 150px;
+    margin-bottom: 65px;
+    text-align: center;
+    }
+
+.card-column {
+    display: inline-block;
+    margin-bottom: 50px;
+
+}
+
+.prod-group-card {
+ 
+    width: 500px;
+    background-color:white;
+    border-radius: 10px;
+    border: solid 3px rgb(22, 1, 1);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.card-img {
+    background-size: cover;    
+    height: 340px;
+    border-bottom: solid 3px rgb(22, 1, 1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.img1 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/sock1.jpg');
+    background-position-y: -33px;
+}
+
+.img2 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/shoe1.jpg');
+    background-position-y: -83px;
+}
+
+.img3 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/bag1.jpg');
+    background-position-y: -93px;
+}
+
+.img4 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/sock2.jpg');
+}
+
+.img5 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/shoe2.jpg');
+}
+
+.img6 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/bag2.jpg');
+    background-position-y: -203px;
+}
+
+.img7 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/sock3.jpg');
+    background-position-y: -33px;
+}
+
+.img8 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/shoe3.jpg');
+    background-position-y: -93px;
+}
+
+.img9 {
+    background-image: url('/Week_1_HTML_CSS/Day_02/Exercises/images/bag3.jpg');
+    background-position-y: -93px;
+}
+
+.btn-new {
+    background-color: rgb(73, 167, 70);
+    color: white;
+    border: none;
+    border-radius: 80px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 140px;
+}
+
+.btn-discount {
+    background-color: rgb(235, 199, 0);
+    color: white;
+    border: none;
+    border-radius: 80px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 150px;
+}
+
+.btn-discount-solo {
+    background-color: rgb(235, 199, 0);
+    color: white;
+    border: none;
+    border-radius: 80px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 380px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+ }
+
+
+.card-price {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.new-price {
+    color: rgb(90, 209, 86);
+}
+
+.old-price {
+    color: rgb(192, 192, 192);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.add-cart-btn {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: solid 2px rgb(185, 185, 185);
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: rgb(155, 155, 155);
+    
+}
+
+.add-cart-btn:hover {
+    border: solid 2px rgb(90, 209, 86);
+    background-color: rgb(90, 209, 86);
+    color: white;
+    transition: all 0.3s;
+}
+
+/*FOOTER*/
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    
+    background-color: rgb(22, 1, 1); 
+    width: 100%;
+    border-top: solid 2px rgb(218, 165, 32, 0.5);
+
+    color: wheat;
+    text-align: right;
+    font-size: 20px;
+
+}
+
+.footer-text {
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

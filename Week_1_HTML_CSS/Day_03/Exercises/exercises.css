@@ -335,9 +335,10 @@
     grid-gap: 5px;
 
     margin-top: 13px;
+    
 }
 
-.grid-item {
+.grid-item6 {
     padding-top: 20px;
     font-size: 18px;
 }
@@ -409,7 +410,7 @@
     grid-gap: 8px;
 }
 
-.grid-item {
+.grid-item7 {
     padding-top: 20px;
     font-size: 30px;
 }

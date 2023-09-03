@@ -1,0 +1,401 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+.header {
+    width: 100%;
+    background-color: #09013F;
+        
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu-item a {
+    color:#5AD156;
+    text-decoration: none;    
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    
+}
+
+.menu-link-text {
+    padding: 20px;
+}
+
+.menu-link-text:hover {
+    background-color: #5AD156;
+    transition: all 0.3s;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 90px;
+    width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+    background-color: rgb(247, 247, 247);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.about-img {
+    width: 50%;
+    text-align: right;
+
+}
+
+#profile-img {
+    height: 430px;
+    border: solid 1px #09013F;
+}
+.text-header {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #5AD156;
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.text-main {
+    font-family: 'Lato', sans-serif;
+    color: #09013F;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+
+.sm-icons {
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.fa-brands {
+    margin-right: 15px;
+}
+
+#cta {
+    font-size: 60px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.cta {
+    background-color: #5AD156;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+#stick-nav-portfolio {
+    margin-top: 30px;
+    background-color: #013E74;
+    display: flex;
+    position: sticky;
+    overflow: visible;
+    top: 72px;
+    z-index: 99;
+    justify-content: space-between;
+}
+
+.stick-menu {
+    display: flex;
+}
+
+.stick-menu-item a {
+    color:white;
+    text-decoration: none;    
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    
+}
+
+.stick-menu-link-text {
+    padding: 20px;
+}
+
+.stick-menu-link-text:hover {
+    background-color: #00B7D9;
+    transition: all 0.3s;
+    color: white;
+}
+
+#portfolio {
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.port-sections {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    background-color: rgb(247, 247, 247);
+
+}
+
+.portfolio-header {
+    color: #013E74;
+    font-weight: 500;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    }
+
+.portfolio-section {
+    padding: 30px;
+}
+
+.section-row {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.port-card {
+    background-color: white;
+    width: 600px;
+    border: solid 2px #013E74;
+    border-radius: 6px;
+
+}
+
+.port-card-top {
+    background-image: url('/Portfolio/images/project-bg.png');
+    padding: 100px;
+}
+
+.port-card-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.project-description-header {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #013E74;
+    letter-spacing: 0.5px;
+}
+
+.project-description-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.explore-btn {
+text-align: center;
+position: relative;
+top: -30px;
+}
+
+.port-git {
+    background-color: #5AD156;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+}
+
+#tech-skills {
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.skills-header {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #5AD156;
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.skill-card {    
+    width: 30%;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+.skill-card-header {
+    color:white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#back {
+    background-color: #5AD156;
+    border: solid 2px #5AD156;
+}
+
+#front {
+    background-color: #00B7D9;
+    border: solid 2px #00B7D9;
+}
+
+#ui {
+    background-color: #013E74;
+    border: solid 2px #013E74;
+}
+
+.skills-body {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#contacts {
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 30px;
+    
+}
+
+.contacts-section {
+    display: flex;
+    justify-content: space-between;
+    }
+
+.contact-input {
+    padding: 30px;
+}
+
+.cont-header {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.section-header-cont {
+    background-color: #013E74;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    background-color: white;
+    padding: 0px;
+    padding-left: 20px;
+    font: inherit;
+    outline: none;
+    border: solid 1px #aeaeae;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+#cont-text {
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+    border: solid 1px #aeaeae;
+    font-size: 16px;
+    background-color: white;
+    padding: 0px;
+    padding-left: 20px;
+    font: inherit;
+    outline: none;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.form-text {
+    font-size: 18px;
+    font-weight: 500;
+    color:#09013F;
+}
+
+.submit-btn {
+    width: 600px;
+    height: 60px;
+    background-color: #5AD156;
+    color: white;
+    border: solid 2px #5AD156;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+
+}
+
+
+.submit-btn:hover {
+    background-color: #5AD156;
+    color: white;
+    cursor: pointer;
+
+}
+
+.contact-img {
+    background-image: url('/Portfolio/images/project-bg.png');
+    width: 50%;
+}
+
+.footer {
+    background-color: #09013F; 
+    width: 100%;
+
+    color: #5AD156;
+    text-align: right;
+    font-size: 20px;
+
+    position: relative;
+    margin-top: 90px;
+}
+
+.footer-text {
+    margin-right: 30px;
+}
+
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
