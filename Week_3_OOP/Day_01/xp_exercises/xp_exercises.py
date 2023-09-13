@@ -117,11 +117,6 @@ stairway.sing_me_a_song()
 #     4: ['Eel', 'Emu']
 # }
 
-
-
-
-
-
 #Solution EX 4:
 
 class Zoo:
