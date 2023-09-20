@@ -32,3 +32,11 @@ class AnagramChecker :
         return anagrams
 
 
+# anagram_checker = AnagramChecker("C:/Users/User/OneDrive/Documents/DevInst/Week_3_OOP/Day_05/xp_exercises/words.txt") 
+
+# my_word = "tea"
+# if anagram_checker.is_valid_word(my_word):
+#     anagrams = anagram_checker.get_anagrams(my_word)
+#     print(f"Anagrams for '{my_word}': {anagrams}")
+# else:
+#     print(f"'{my_word}' is not a valid word.")

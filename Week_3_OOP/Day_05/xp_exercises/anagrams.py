@@ -41,7 +41,7 @@ def main() :
                 anagrams = anagram_checker.get_anagrams(my_word)
                 print("\nYOUR WORD:", f'"{my_word.upper()}"')
                 print("This is a valid English word.")
-                print("Anagrams for your word:", ", ".join(anagrams))
+                print("Anagrams for the word:", ", ".join(anagrams))
             else:
                 print("\nError: Please enter a valid word with only letters.")
         elif choice == "2" :
@@ -52,3 +52,20 @@ def main() :
 
 if __name__ == "__main__" :
     main()
+
+
+
+#     def get_anagrams(self, word) :
+#         word = word.lower() 
+#         anagrams = [item for item in self.valid_words if self.is_anagram(word, item) and word != item]
+#         return anagrams
+
+
+# anagram_checker = AnagramChecker("words.txt") 
+
+# my_word = "meat"
+# if anagram_checker.is_valid_word(my_word):
+#     anagrams = anagram_checker.get_anagrams(my_word)
+#     print(f"Anagrams for '{my_word}': {anagrams}")
+# else:
+#     print(f"'{my_word}' is not a valid word.")
