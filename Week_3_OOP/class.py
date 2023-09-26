@@ -1,20 +1,39 @@
-sent_input = input("Enter the longest sentence you can without the letter 'a': \n")
-sent_length = int()
-while 'quit' not in sent_input:    
-    if 'a' not in sent_input :
-        sent_input_check = sent_input
-        if sent_length < len(sent_input_check) :
-            sent_length = len(sent_input_check)
-            print("Congrats! Your sentence is longer than the previous one!")
-            sent_input = input("Enter the longest sentence you can without the letter 'a', or type 'quit': \n")
-            
-        else :
-            print("Oops! Your sentence is not longer than the previous one!")
-            sent_input = input("Enter the longest sentence you can without the letter 'a', or type 'quit': \n")
+from datetime import date
 
-    else :
-        print("No letter 'a', remember?")
-        sent_input = input("Enter the longest sentence you can without the letter 'a', or type 'quit': \n")
+birth_date = input("What is your birth date (YYYY-MM-DD)? ")
+
+birth = date.fromisoformat(birth_date)
+today = date.today()
+delta = today - birth
+years = delta.days // 365
+years_str = str(years)
+year_last_num = int(years_str[-1])
+candles = "i" * year_last_num
+
+print(f'''
+       ___{candles}___
+      |{" "*((year_last_num // 2) - 3)}:H:a:p:p:y:{" "*((year_last_num // 2) - 2)}|
+    __|____{"_"*(year_last_num - 3)}______|__
+   |^^^^^^^^{"^"*(year_last_num - 3)}^^^^^^^^|
+   |{" "*((year_last_num // 2) - 3)}:B:i:r:t:h:d:a:y:{" "*((year_last_num // 2) - 2)}|
+   |       {" "*(year_last_num - 3)}         |
+   ~~~~~~~{"~"*(year_last_num - 3)}~~~~~~~~~~~    
+      
+    ''')
+
+
+if birth.year % 4 == 0 :
+    print(f'''\n
+       ___{"i"*years}___
+      |{" "*((years // 2) - 3)}:H:a:p:p:y:{" "*((years // 2) - 2)}|
+    __|____{"_"*(years - 4)}______|__
+   |^^^^^^^^{"^"*(years - 4)}^^^^^^^^|
+   |{" "*((years // 2) - 3)}:B:i:r:t:h:d:a:y:{" "*((years // 2) - 2)}|
+   |       {" "*(years - 4)}         |
+   ~~~~~~~{"~"*(years - 4)}~~~~~~~~~~~    
+      
+    ''')
+
 
 
 
