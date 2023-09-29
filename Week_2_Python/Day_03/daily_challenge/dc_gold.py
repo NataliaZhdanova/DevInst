@@ -16,16 +16,3 @@
 
 # for letter in text:
 #     cypher_text += chr(ord(letter) + 3)
-
-
-set1 = {"apple", "banana", "cherry"}  
-set2 = {"google", "microsoft", "apple"} 
-
-  
-set3 = {"google", "apple"}
-set4 = {"ibm", "emc", "google", "amazon", "microsoft", "apple", "facebook"} 
-set3.issubset(set2) 
-set4.issuperset(set2) 
-
-
-# there will be no 'apple' in the combined set
