@@ -1,3 +1,5 @@
+# What You Will Create
+# Use python to create a Hangman game.
 # The 'print_hangman' function draws the "hangman" figure accordint to the number of wrong attempts.
 
 def print_hangman(wrong_attempts) :
@@ -143,3 +145,12 @@ def game() :
     play(get_random_word(get_words_from_file(file_name)))
 
 game()
+        
+
+# Instructions
+# The computer choose a random word and mark stars for each letter of each word.
+# Then the player will guess a letter.
+# If that letter is in the word(s) then the computer fills the letter in all the correct positions of the word.
+# If the letter isn’t in the word(s) then add a body part to the gallows (head, body, left arm, right arm, left leg, right leg).
+# The player will continue guessing letters until they can either solve the word(s) (or phrase) or all six body parts are on the gallows.
+# The player can’t guess the same letter twice.
