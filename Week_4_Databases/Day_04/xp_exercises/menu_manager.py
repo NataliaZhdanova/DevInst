@@ -20,6 +20,7 @@ class MenuManager :
         else:
             print(results)
         connection.close()
+        
 
     def all_items(table_name = "menu_items") :
         query = f"SELECT item_name, item_price FROM {table_name};"
