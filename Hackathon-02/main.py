@@ -1,3 +1,5 @@
+# To use this scraper, you need to be authenticated with Glassdoor
+
 import gd_jobs
 import scraper
 
