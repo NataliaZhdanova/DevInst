@@ -117,7 +117,7 @@ console.log("There are " + (building.numberOfAptByFloor.firstFloor + building.nu
 console.log(Object.keys(building.numberOfRoomsAndRent)[1] + " has " + building.numberOfRoomsAndRent.dan[0] + " rooms in his apartment.");
 
 if ((building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1]) > building.numberOfRoomsAndRent.dan[1]) {
-    building.numberOfRoomsAndRent.dan[1] = 1200;
+    building.numberOfRoomsAndRent.dan[1] = 2200;
     console.log(building.numberOfRoomsAndRent.dan[1]);
 }
 
