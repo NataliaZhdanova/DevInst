@@ -1,45 +1,113 @@
 // Instructions
-// Using this object :
+// Using this array:
 
-let client = "Betty";
+const gameInfo = [
+ {
+   username: "john",
+   team: "red",
+   score: 5,
+   items: ["ball", "book", "pen"]
+ },
+ {
+   username: "becky",
+   team: "blue",
+   score: 10,
+   items: ["tape", "backpack", "pen"]
+ },
+ {
+   username: "susy",
+   team: "red",
+   score: 55,
+   items: ["ball", "eraser", "pen"]
+ },
+ {
+   username: "tyson",
+   team: "green",
+   score: 1,
+   items: ["book", "pen"]
+ },
+];
+// Create an array using forEach that contains all the usernames from the gameInfo array, add an exclamation point (ie. “!”) to the end of every username.
+// The new array should look like this :
+// const usernames = ["john!", "becky!", "susy!", "tyson!"]
+const usernames = [];
+gameInfo.forEach(user => {
+  usernames.push(user.username + "!");
+});
 
-const groceries = {
-    fruits : ["pear", "apple", "banana"],
-    vegetables: ["tomatoes", "cucumber", "salad"],
-    totalPrice : "35$",
-    other : {
-        paid : false,
-        meansOfPayment : ["cash", "creditCard"]
-    }
+// 2. Create an array using forEach that contains the usernames of all players with a score bigger than 5.
+// The new array should look like this :
+// const winners = ["becky", "susy"]
+
+const winners = [];
+gameInfo.forEach(user => {
+  if (user.score > 5) {
+    winners.push(user.username);
+  }
+});
+
+// 3. Find and display the total score of the users. (Hint: The total score is 71)
+
+let totalScore = 0;
+gameInfo.forEach(user => {
+  totalScore += user.score;
+});
+
+// ======
+
+// Instructions
+// Part I
+
+// Create a function getCarHonda(carInventory) that takes a single parameter. carInventory‘s value is an array which is an inventory of cars (see the array of objects below)
+// The function should
+// loop through the array of object and return the first car with the name “Honda”.
+// then, return a string in the format This is a {car_make} {car_model} from {car_year}.
+// Hint : Find an array method that returns the value of the first element in an array that pass a test.
+// Use the cars inventory below:
+ const inventory = [
+   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+   { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+   { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+   { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+];
+
+
+function getCarHonda(inventory) {
+  const honda = inventory.find(car => car.car_make === "Honda");
+  return `This is a ${honda.car_make} ${honda.car_model} from ${honda.car_year}.`;
 }
-// Hint: To do this daily challenge, take a look at today’s lesson Pass By Value & Pass By Reference
 
-// Create an arrow function named displayGroceries, that console.logs the 3 fruits from the groceries object. Use the forEach method.
+console.log(getCarHonda(inventory));
 
-const displayGroceries = (fruits) => fruits.forEach((fruit) => console.log(fruit));
 
-displayGroceries(groceries.fruits);
+// Part II
 
-// Create another arrow function named cloneGroceries.
+// Create a function sortCarInventoryByYear(carInventory) that takes a single parameter. carInventory‘s value is an array which is an inventory of cars (see the array of objects below)
+// the function should return an inventory that is sorted by car_year, ascending.
+// Hint : Check out this tutorial on the sort method
+// Use the cars inventory below:
 
-const cloneGroceries = () => {
-    let user = client;
-    console.log(user);
-    let shopping = groceries;
-    console.log(user);
-    console.log(shopping);
+const carInventory = [
+  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+  { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+  { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+  { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+];
+
+function sortCarInventoryByYear(carInventory) {
+  return carInventory.sort((a, b) => a.car_year - b.car_year);
 }
 
-cloneGroceries();
+console.log(sortCarInventoryByYear(carInventory));
 
-// In the function, create a variable named user that is a copy of the client variable. (Tip : make the user variable equal to the client variable)
-// Change the client variable to “Betty”. Will we also see this modification in the user variable ? Why ?
-// In the function, create a variable named shopping that is equal to the groceries variable.
-// Change the value of the totalPrice key to 35$. Will we also see this modification in the shopping object ? Why ?
-// Change the value of the paid key to false. Will we also see this modification in the shopping object ? Why ?
+// The output should be
 
-// Invoke the cloneGroceries function.
-
-//Answer: Yes, we'll see all these modifications, because both variables in a function point to the same place in memory as the corresponding global variables.
-
-
+// [
+//   { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+//   { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+//   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+//   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+//   { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+// ];
