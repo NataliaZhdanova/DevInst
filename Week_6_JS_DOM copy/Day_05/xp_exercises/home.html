@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ROBOFRIENDS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='/Week_6_JS_DOM/Day_05/xp_exercises/main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>ROBOFRIENDS</div>
+        <div><input type="text" id="filterField" placeholder="Filter..." oninput="filterFunction()"></div>
+
+    </header>
+    <main>
+    <div class="card-row" id="first-row">
+        <div class="card">
+          <img src="robot1.jpg" alt="Robot 1">
+          <h3>Robot 1</h3>
+          <p>Description of Robot 1.</p>
+        </div>
+        <div class="card">
+          <img src="robot2.jpg" alt="Robot 2">
+          <h3>Robot 2</h3>
+          <p>Description of Robot 2.</p>
+        </div>
+        <div class="card">
+            <img src="robot3.jpg" alt="Robot 3">
+            <h3>Robot 3</h3>
+            <p>Description of Robot 3.</p>
+          </div>
+      </div>
+      <div class="card-row" id="second-row">
+        <div class="card">
+          <img src="robot4.jpg" alt="Robot 4">
+          <h3>Robot 4</h3>
+          <p>Description of Robot 4.</p>
+        </div>
+        <div class="card">
+          <img src="robot5.jpg" alt="Robot 5">
+          <h3>Robot 5</h3>
+          <p>Description of Robot 5.</p>
+        </div>
+        <div class="card">
+            <img src="robot6.jpg" alt="Robot 6">
+            <h3>Robot 6</h3>
+            <p>Description of Robot 6.</p>
+          </div>
+      </div>
+    </main>
+    <div class="prod-cards">
+        <div class="card-column">
+            <div class="prod-group-card">
+                <div class="card-img img1">
+                    <button class="btn-new">NEW</button>
+                    <button class="btn-discount">-10%</button>
+                </div>
+                <p class="card-title">Socks in Mammen stitch, size 38 EU</p>
+                <p class="card-price"><span class="new-price">$60.00</span> <span class="old-price">$65.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+            <div class="prod-group-card">
+                <div class="card-img img2">
+                    <button class="btn-new">NEW</button>
+                    <button class="btn-discount">-10%</button>
+                </div>
+                <p class="card-title">Turnshoes type Jorwik, size 43 EU</p>
+                <p class="card-price"><span class="new-price">$60.00</span> <span class="old-price">$65.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+            <div class="prod-group-card">
+                <div class="card-img img3">
+                    <button class="btn-new">NEW</button>
+                    <button class="btn-discount">-10%</button>
+                </div>
+                <p class="card-title">Medieval kidney poach</p>
+                <p class="card-price"><span class="new-price">$60.00</span> <span class="old-price">$65.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+        </div>
+        <div class="card-column">
+            <div class="prod-group-card">
+                <div class="card-img img4">
+                    <button class="btn-discount-solo">-12%</button>
+                </div>
+                <p class="card-title">Socks in Oslo stitch, size 42 EU</p>
+                <p class="card-price"><span class="new-price">$70.00</span> <span class="old-price">$75.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+            <div class="prod-group-card">
+                <div class="card-img img5">
+                    <button class="btn-new">NEW</button>
+                    <button class="btn-discount">-10%</button>
+                </div>
+                <p class="card-title">Turnshoes type Jorwik, size 40 EU</p>
+                <p class="card-price"><span class="new-price">$60.00</span> <span class="old-price">$65.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+            <div class="prod-group-card">
+                <div class="card-img img6">
+                    <button class="btn-new">NEW</button>
+                    <button class="btn-discount">-10%</button>
+                </div>
+                <p class="card-title">Medieval kidney poach</p>
+                <p class="card-price"><span class="new-price">$60.00</span> <span class="old-price">$65.00</span></p>
+                <button class="add-cart-btn">ADD TO CARD</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="xp_script.js"></script>  
+</body>
+</html>
