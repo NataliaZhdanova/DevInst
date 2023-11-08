@@ -1,113 +1,44 @@
-// Instructions
-// Using this array:
+// Use this Giphy API Random documentation. Use this API Key : hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+// In the HTML file, add a form, containing an input and a button. This input is used to fetch gif depending on a specific category.
+// In the JS file, create a program to fetch one random gif depending on the search of the user (ie. If the search is “sun”, append on the page one gif with a category of “sun”).
+// The gif should be appended with a DELETE button next to it. Hint : to find the URL of the gif, look for the sub-object named “images” inside the data you receive from the API.
+// Allow the user to delete a specific gif by clicking the DELETE button.
+// Allow the user to remove all of the GIFs by clicking a DELETE ALL button.
 
-const gameInfo = [
- {
-   username: "john",
-   team: "red",
-   score: 5,
-   items: ["ball", "book", "pen"]
- },
- {
-   username: "becky",
-   team: "blue",
-   score: 10,
-   items: ["tape", "backpack", "pen"]
- },
- {
-   username: "susy",
-   team: "red",
-   score: 55,
-   items: ["ball", "eraser", "pen"]
- },
- {
-   username: "tyson",
-   team: "green",
-   score: 1,
-   items: ["book", "pen"]
- },
-];
-// Create an array using forEach that contains all the usernames from the gameInfo array, add an exclamation point (ie. “!”) to the end of every username.
-// The new array should look like this :
-// const usernames = ["john!", "becky!", "susy!", "tyson!"]
-const usernames = [];
-gameInfo.forEach(user => {
-  usernames.push(user.username + "!");
-});
+const apiKey = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+const gifForm = document.getElementById("gifForm");
+const searchInput = document.getElementById("searchInput");
+const gifContainer = document.getElementById("gifContainer");
+const deleteAllButton = document.getElementById("deleteAllButton");
 
-// 2. Create an array using forEach that contains the usernames of all players with a score bigger than 5.
-// The new array should look like this :
-// const winners = ["becky", "susy"]
+gifForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const searchTerm = searchInput.value;
+  const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${searchTerm}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const gifUrl = data.data.images.original.url;
 
-const winners = [];
-gameInfo.forEach(user => {
-  if (user.score > 5) {
-    winners.push(user.username);
+    const gifDiv = document.createElement("div");
+    const gifImg = document.createElement("img");
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    gifImg.src = gifUrl;
+
+    deleteButton.addEventListener("click", () => {
+      gifContainer.removeChild(gifDiv);
+    });
+
+    gifDiv.appendChild(gifImg);
+    gifDiv.appendChild(deleteButton);
+    gifContainer.appendChild(gifDiv);
+  } catch (error) {
+    console.error("We could't fetch a gif...", error);
   }
 });
 
-// 3. Find and display the total score of the users. (Hint: The total score is 71)
 
-let totalScore = 0;
-gameInfo.forEach(user => {
-  totalScore += user.score;
+deleteAllButton.addEventListener("click", () => {
+  gifContainer.innerHTML = '';
 });
-
-// ======
-
-// Instructions
-// Part I
-
-// Create a function getCarHonda(carInventory) that takes a single parameter. carInventory‘s value is an array which is an inventory of cars (see the array of objects below)
-// The function should
-// loop through the array of object and return the first car with the name “Honda”.
-// then, return a string in the format This is a {car_make} {car_model} from {car_year}.
-// Hint : Find an array method that returns the value of the first element in an array that pass a test.
-// Use the cars inventory below:
- const inventory = [
-   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-   { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-   { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-   { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-];
-
-
-function getCarHonda(inventory) {
-  const honda = inventory.find(car => car.car_make === "Honda");
-  return `This is a ${honda.car_make} ${honda.car_model} from ${honda.car_year}.`;
-}
-
-console.log(getCarHonda(inventory));
-
-
-// Part II
-
-// Create a function sortCarInventoryByYear(carInventory) that takes a single parameter. carInventory‘s value is an array which is an inventory of cars (see the array of objects below)
-// the function should return an inventory that is sorted by car_year, ascending.
-// Hint : Check out this tutorial on the sort method
-// Use the cars inventory below:
-
-const carInventory = [
-  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-  { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-  { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-  { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-];
-
-function sortCarInventoryByYear(carInventory) {
-  return carInventory.sort((a, b) => a.car_year - b.car_year);
-}
-
-console.log(sortCarInventoryByYear(carInventory));
-
-// The output should be
-
-// [
-//   { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-//   { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-//   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-//   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-//   { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-// ];

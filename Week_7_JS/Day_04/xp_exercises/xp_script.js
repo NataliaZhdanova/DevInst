@@ -1,114 +1,113 @@
-// 🌟 Exercise 1 : Colors
+// 🌟 Exercise 1 : Giphy API
 // Instructions
-// Using this array :
+// With your knewly accumulated knowledge of the Fetch API lets write some cool code!
 
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+// You will work with this part of the documention
 
-// Write a JavaScript program that displays the colors in the following order : “1# choice is Blue.” “2# choice is Green.” “3# choice is Red.” ect…
-// Check if at least one element of the array is equal to the value “Violet”. If yes, console.log("Yeah"), else console.log("No...")
-// Hint : Use the array methods taught in class. Look at the lesson Array Methods.
+// You will use this Gif URL: https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+// Explanation of the Gif URL and the queries
 
-colors.forEach(color => {
-    console.log(`#${colors.indexOf(color) + 1} choice is ${color}.`)
-    });
+// q Request Parameter: Search query term or phrase. Above, the URL is searching for “hilarious” gifs
 
-let check = colors.some((value) => { return (value === "Violet");}) ? console.log("Yeah") : console.log("No...");
+// rating Request Parameter: Filters results by specified rating. We are searching for Level 1 gifs. Check out the ratings documentation
 
-// 🌟 Exercise 2 : Colors #2
+// api_key Request Paramater : GIPHY API Key. Our API KEY is hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+
+// Create a program to retrieve the data from the API URL provided above.
+// Use the fetch() method to make a GET request to the Giphy API and Console.log the Javascript Object that you receive.
+// Make sure to check the status of the Response and to catch any occuring errors.
+
+async function fetchGif() {
+    try {
+        const response = await fetch("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+		console.log("Ooops...", error);
+	}
+}
+
+fetchGif();
+
+// 🌟 Exercise 2 : Giphy API
 // Instructions
-// Using these arrays :
+// Read carefully the documention to understand all the possible queries that the URL accept.
+// Use the Fetch API to retrieve 10 gifs about the “sun”. The starting position of the results should be 2.
+// Make sure to check the status of the Response and to catch any occuring errors.
+// Console.log the Javascript Object that you receive.
 
-// const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-const ordinal = ["st","nd","rd", "th"];
-// Write a JavaScript program that displays the colors in the following order : “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect…
-// Hint : Use the array methods taught in class and ternary operator.
+async function fetchGifSun() {
+    try {
+        const response = await fetch("https://api.giphy.com/v1/gifs/search?q=sun&limit=10&offset=2&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+		console.log("Ooops...", error);
+	}
+}
 
-colors.forEach(color => {
-    const num = (colors.indexOf(color) + 1 <= 3) ? (colors.indexOf(color) + 1) + ordinal[colors.indexOf(color)] : (colors.indexOf(color) + 1) + ordinal[3];
-    console.log(`${num} choice is ${color}.`)
-    });
+fetchGifSun();
 
-// Exercise 3 : Analyzing
+
+// 🌟 Exercise 3 : Async Function
 // Instructions
-// Analyze these pieces of code before executing them. What will be the outputs ?
-// ------1------
-const fruits = ["apple", "orange"];
-const vegetables = ["carrot", "potato"];
+// Improve the program below :
 
-const result = ['bread', ...vegetables, 'chicken', ...fruits];
-console.log(result);
+// fetch("https://www.swapi.tech/api/starships/9/")
+//     .then(response => response.json())
+//     .then(objectStarWars => console.log(objectStarWars.result));
+// Create an async function, that will await for the above GET request.
+// The program shouldn’t contain any then() method.
+// Make sure to check the status of the Response and to catch any occuring errors.
 
-// Answer: the output will be - result = ["bread", "carrot", "potato", "chicken", "apple", "orange"]
+// async function getData() {
+//     try {
+//       const response = await fetch("https://www.swapi.tech/api/starships/9/");
+//       if (!response.ok) {
+//         throw new Error("The response was not OK");
+//       }
+//       const data = await response.json();
+//       console.log(data.result);
+//     } catch (error) {
+//       console.error("There was a problem:", error);
+//     }
+// }
+  
+// getData();
 
-// ------2------
-const country = "USA";
-console.log([...country]);
+async function fetchShip() {
+    try {
+        const response = await fetch("https://www.swapi.tech/api/starships/9/");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+		console.log("Ooops...", error);
+	}
+}
 
-// Answer: the output will be - ["U", "S", "A"]
-
-// ------Bonus------
-let newArray = [...[,,]];
-console.log(newArray);
-
-// Answer: some kind of an array with undefined values
+fetchShip();
 
 
-// 🌟 Exercise 4 : Employees
+// 🌟 Exercise 4: Analyze
 // Instructions
-// Using this array:
+// Analyse the code provided below - what will be the outcome?
 
-const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
-              { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
-              { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
-              { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
-              { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
-              { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
-              { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
+// function resolveAfter2Seconds() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve('resolved');
+//         }, 2000);
+//     });
+// }
 
-// Using the map() method, push into a new array the firstname of the user and a welcome message. You should get an array that looks like this :
-// const welcomeStudents = ["Hello Bradley", "Hello Chloe", "Hello Jonathan", "Hello Michael", "Hello Robert", "Hello Wes", "Hello Zach"]
+// async function asyncCall() {
+//     console.log('calling');
+//     let result = await resolveAfter2Seconds();
+//     console.log(result);
+// }
 
-const welcomeStudents = users.map((user => `Hello ${user.firstName}`));
-console.log(welcomeStudents);
-
-// 2. Using the filter() method, create a new array, containing only the Full Stack Residents.
-
-const fsUsers = users.filter(user => user.role === 'Full Stack Resident');
-console.log(fsUsers);
-
-// 3. Bonus : Chain the filter method with a map method, to return an array containing only the lastName of the Full Stack Residents.
-
-const bonus = (users.filter(user => user.role === 'Full Stack Resident')).map((user => `${user.lastName}`));
-console.log(bonus);
-
-// 🌟 Exercise 5 : Star Wars
-// Instructions
-
-const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
-
-// Use the reduce() method to combine all of these into a single string.
-
-const reducer = (accumulator, currentValue) => accumulator + " " + currentValue;
-const intro = epic.reduce(reducer);
-console.log(intro);
+// asyncCall();
 
 
-// 🌟 Exercise 6 : Employees #2
-// Instructions
-// Using this object:
-
-const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
-                {name: "Liam", course: "Computer Science", isPassed: false}, 
-                {name: "Jenner", course: "Information Technology", isPassed: true}, 
-                {name: "Marco", course: "Robotics", isPassed: true}, 
-                {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
-                {name: "Jamie", course: "Big Data", isPassed: false}];
-
-// Using the filter() method, create a new array, containing the students that passed the course.
-
-const goodStudents = students.filter(student => student.isPassed === true);
-console.log(goodStudents);
-
-// Bonus : Chain the filter method with a forEach method, to congratulate the students with their name and course name (ie. “Good job Jenner, you passed the course in Information Technology”, “Good Job Marco you passed the course in Robotics” ect…)
-
-(students.filter(student => student.isPassed === true)).forEach(student => console.log(`Good job, ${student.name}, you passed the course in ${student.course}!`));
+// Answer:
+// "calling" will be output to the console instantly. "resolved" will be output to the console after 2 secs.
