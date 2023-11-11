@@ -1,43 +1,60 @@
-// Create a function that:
+// The program should take the currency which the user currently has and the currency in which they would like to receive, as well as the amount of money. 
+// Afterwards, the program will output the correct exchange rate based on the data from the APIs.
 
-// takes in two strings as two parameters
-// and returns a boolean that indicates whether or not the first string is an anagram of the second string.
-// Some Help
+// First, you need to fetch all the supported currencies, in order to add the currencies options (ie FROM - To) in the currency converter. 
+// Check out this page on Supported Codes Endpoint from the ExchangeRate API documentation.
 
-// What is an anagram?
-// An anagram is another word or phrase formed by rearranging letters of the first word or phrase.
+// To convert from a currency, to another one, you need to fetch conversion rate from the Pair Conversion API endpoint. Check out this page on Pair conversion requests from the ExchangeRate API documentation.
+// Hint: You could also supply an optional AMOUNT variable in the query of the request.
 
+// Bonus: Add this “switch” button on the page, when clicked on it will switch the currencies and display the new amount converted.
+// Example : if the conversion was from EUR to GBP, as soon as the button is clicked on, the conversion should be from GBP to EUR.
 
-// Example of anagrams
+const fromCurr = document.getElementById("fromCurrency");
+const toCurr = document.getElementById("toCurrency");
+const amount = document.getElementById("amount");
+const convertCurr = document.getElementById("convertBtn");
+const switchCurr = document.getElementById("switchBtn");
+const resultDisplay = document.getElementById("result");
 
-// "Astronomer" is an anagram of "Moon starer"
-// "School master" is an anagram of "The classroom"
-// "The Morse Code" is an anagram of "Here come dots"
+const apiKey = "f4c85fedf933ae628bd36ebd";
 
+async function fetchCurrencies() {
+  const response = await fetch(`https://open.er-api.com/v6/latest`);
+  const data = await response.json();
+  const currencies = Object.keys(data.rates);
 
-// Do we need to consider whitespace?
-// Trim whitespace prior to comparison.
-
-
-function isAnagram(string1, string2) {
-  const unify = (str) =>
-    str
-      .toLowerCase()
-      .split("")
-      .sort()
-      .join("");
-
-  const sortedStr1 = normalize(str1);
-  const sortedStr2 = normalize(str2);
-
-  return sortedStr1 === sortedStr2;
+  currencies.forEach(currency => {
+    const ddListCurr1 = document.createElement("option");
+    const ddListCurr2 = document.createElement("option");
+    ddListCurr1.value = ddListCurr2.value = currency;
+    ddListCurr1.textContent = ddListCurr2.textContent = currency;
+    fromCurr.appendChild(ddListCurr1);
+    toCurr.appendChild(ddListCurr2);
+  });
 }
 
-// Example usage:
-const result1 = isAnagram("Astronomer", "Moon starer");
-const result2 = isAnagram("School master", "The classroom");
-const result3 = isAnagram("The Morse Code", "Here come dots");
+fetchCurrencies();
 
-console.log(result1);
-console.log(result2);
-console.log(result3);
+async function convertCurrency() {
+
+  const fromCurrency = fromCurr.value;
+  const toCurrency = toCurr.value;
+  const money = Number(amount.value);
+ 
+  const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/pair/${fromCurrency}/${toCurrency}/${money}`);
+  const data = await response.json();
+  const result = data.conversion_result.toFixed(2);
+
+  resultDisplay.innerHTML = `<p>Converted Amount: ${result} ${toCurrency}</p>`;
+}
+
+
+convertCurr.addEventListener("click", convertCurrency);
+switchCurr.addEventListener("click", () => {
+  const temp = fromCurr.value;
+  fromCurr.value = toCurr.value;
+  toCurr.value = temp;
+});
+
+

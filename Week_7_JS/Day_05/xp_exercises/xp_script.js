@@ -1,91 +1,72 @@
-const robots = [
-    {
-      id: 1,
-      name: 'Leanne Graham',
-      username: 'Bret',
-      email: 'Sincere@april.biz',
-      image: 'https://robohash.org/1?200x200'
-    },
-    {
-      id: 2,
-      name: 'Ervin Howell',
-      username: 'Antonette',
-      email: 'Shanna@melissa.tv',
-      image: 'https://robohash.org/2?200x200'
-    },
-    {
-      id: 3,
-      name: 'Clementine Bauch',
-      username: 'Samantha',
-      email: 'Nathan@yesenia.net',
-      image: 'https://robohash.org/3?200x200'
-    },
-    {
-      id: 4,
-      name: 'Patricia Lebsack',
-      username: 'Karianne',
-      email: 'Julianne.OConner@kory.org',
-      image: 'https://robohash.org/4?200x200'
-    },
-    {
-      id: 5,
-      name: 'Chelsey Dietrich',
-      username: 'Kamren',
-      email: 'Lucio_Hettinger@annie.ca',
-      image: 'https://robohash.org/5?200x200'
-    },
-    {
-      id: 6,
-      name: 'Mrs. Dennis Schulist',
-      username: 'Leopoldo_Corkery',
-      email: 'Karley_Dach@jasper.info',
-      image: 'https://robohash.org/6?200x200'
-    },
-    {
-      id: 7,
-      name: 'Kurtis Weissnat',
-      username: 'Elwyn.Skiles',
-      email: 'Telly.Hoeger@billy.biz',
-      image: 'https://robohash.org/7?200x200'
-    },
-    {
-      id: 8,
-      name: 'Nicholas Runolfsdottir V',
-      username: 'Maxime_Nienow',
-      email: 'Sherwood@rosamond.me',
-      image: 'https://robohash.org/8?200x200'
-    },
-    {
-      id: 9,
-      name: 'Glenna Reichert',
-      username: 'Delphine',
-      email: 'Chaim_McDermott@dana.io',
-      image:'https://robohash.org/9?200x200'
-    },
-    {
-      id: 10,
-      name: 'Clementina DuBuque',
-      username: 'Moriah.Stanton',
-      email: 'Rey.Padberg@karina.biz',
-      image:'https://robohash.org/10?200x200'
-    }
-    ];
+// Instructions
+// You should use this API: https://www.swapi.tech/ to get the data and update it “randomly” in your website by clicking a button.
+// Note: The API contains 83 different characters
 
-// In this project you will have to create a robot website (you can use your own css to style your project):
-// PART I : The Website
-// The webpage displays Cards of Robots with their respective image and information.
-// 2. You have to create the cards by using the values from the array of objects provided in the ASSETS below.
+// Create your HTML file, and add the relevant elements.
 
-// When you search for a specific name in the search box, the webpage filters the cards displayed. 
-// For example is you write “nic” in the search box, you will display the robot which name contains “nic”, which means only one robot: “Nicholas”.
+// In your JS file, create your functions :
+// to retrieve the elements from the DOM.
+// to get the data from the API (star wars characters).
+// to display the info on the DOM: the name, height, gender, birth year, and home world of the character.
 
-// 2. Display the cards in the DOM, using DOM elements and selectors, and filter them with the search box.
+// Display the data using AJAX. Make sure to display a loading message as follows:
+// You can use any of these animation icons for the loading message.
+// Fontawesome link :
+// https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
 
-// PART II : The Style
-// You can use your own images or use this website to generate a new Robot Image.
+// 4. If there is an error getting the data, display a message as follows:
+// 5. You can use your own css to style the website as you see fit
 
-// Check out those links to generate the correct font
-// cdnfonts
-// dafont
+const text = document.getElementById("text");
+const btn = document.getElementById("find");
 
-// You can use those images for the background (click righ on the images below, and “Save image as…” )
+async function fetchData() {
+  try {
+      let randNum = Math.floor(Math.random() * 83)    
+      const response = await fetch(`https://www.swapi.tech/api/people/${randNum}/`);
+      const data = await response.json();
+      const message = data.message;
+      if (message != "ok") {
+        text.innerHTML = `<p>Oh, no! That hero is not available!</p>`
+      }
+      return data;
+  } catch (error) {
+    console.error("Error fetching char data:", error);
+  }
+}
+
+async function fetchPlanet(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const homeworld = data.result.properties.name;
+    return homeworld;
+  } catch (error) {
+    console.error("Error fetching planetr data:", error);
+  }
+}
+
+async function displayDetails(data) {
+  const properties = data.result.properties
+  const { name, height, gender, birth_year, homeworld, skin_color, eye_color} = properties;
+  let homePlanet = await fetchPlanet(homeworld);
+  text.innerHTML = `
+      <h2>${name}</h2><br>
+      <p>Birth Year: ${birth_year}</p>
+      <p>Gender: ${gender}</p>
+      <p>Height: ${height}</p>    
+      <p>Homeworld: ${homePlanet}</p>
+      <p>Skin color: ${skin_color }</p>
+      <p>Eye color: ${eye_color }</p>
+    `;
+   }
+
+btn.addEventListener("click", async (event) => {
+  event.preventDefault();
+  try {
+    const data = await fetchData();
+    displayDetails(data);
+  } catch (error) {
+    console.error('Error:', error);    
+  }
+})

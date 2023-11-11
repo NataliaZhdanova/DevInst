@@ -63,9 +63,6 @@ fetchGifSun();
 // async function getData() {
 //     try {
 //       const response = await fetch("https://www.swapi.tech/api/starships/9/");
-//       if (!response.ok) {
-//         throw new Error("The response was not OK");
-//       }
 //       const data = await response.json();
 //       console.log(data.result);
 //     } catch (error) {
