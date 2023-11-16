@@ -39,7 +39,7 @@ app.get("/api/books", (req, res) => {
 // send a JSON response with the book details and a status code of 200 (OK). If the book is not found, 
 // send a 404 status with a “Book not found” message.
 
-app.get("/api/books/:bookId", (req, res) => {
+app.get("/api/books/bookId", (req, res) => {
     const bookId = parseInt(req.params.bookId);
     const book = books.find((book) => book.id === bookId);
   

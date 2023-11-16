@@ -19,7 +19,7 @@ app.listen(port, () => {
 // Part 3: Using the Data Module in the Express App
 // Inside app.js, import the dataService module you created.
 
-import dataService from "./data/dataService";
+import fetchPosts from "./data/dataService.js";
 
 // Create an endpoint in your Express app that uses the fetchPosts function from the dataService module to 
 // retrieve data from the JSONPlaceholder API.
@@ -30,7 +30,7 @@ import dataService from "./data/dataService";
 
 app.get("/api/posts", async (req, res) => {
   try {
-    const posts = await dataService.fetchPosts();
+    const posts = await fetchPosts();
     res.json(posts);
     console.log("The data was successfully retrieved and sent as a response.");
   } catch (error) {

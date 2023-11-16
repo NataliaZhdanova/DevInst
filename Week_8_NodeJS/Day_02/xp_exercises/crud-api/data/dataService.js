@@ -17,5 +17,4 @@ const fetchPosts = async () => {
   }
 };
 
-
-module.exports.fetchPosts = fetchPosts;
+export default fetchPosts;

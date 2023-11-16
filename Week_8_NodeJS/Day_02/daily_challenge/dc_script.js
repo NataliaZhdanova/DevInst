@@ -16,26 +16,22 @@ const emojis = [
   
   let score = 0;
   
-  app.get('/api/emoji', (req, res) => {
+  app.get("/api/emoji", (req, res) => {
     const randomEmoji = getRandomEmoji();
     const distractors = getDistractors(randomEmoji.name);
-    res.json({ emoji: randomEmoji.emoji, options: shuffleOptions([...distractors, randomEmoji.name]) });
+    res.json({ emoji: randomEmoji.emoji, name: randomEmoji.name, options: shuffleOptions([...distractors, randomEmoji.name]) });
   });
   
-  app.post('/api/guess', express.json(), (req, res) => {
+  app.post("/api/guess", express.json(), (req, res) => {
     const userGuess = req.body.guess;
     const correctGuess = req.body.correctGuess;
-    
+          
     if (userGuess === correctGuess) {
       score += 1;
       res.json({ correct: true, score });
     } else {
       res.json({ correct: false, score });
     }
-  });
-  
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
   });
   
   function getRandomEmoji() {
@@ -45,13 +41,13 @@ const emojis = [
   function getDistractors(correctAnswer) {
     const allEmojiNames = emojis.map(e => e.name);
     const distractors = allEmojiNames.filter(name => name !== correctAnswer);
-    return distractors.slice(0, 2); // Select 2 distractors
+    return distractors.slice(0, 2);
   }
   
   function shuffleOptions(options) {
-    for (let i = options.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [options[i], options[j]] = [options[j], options[i]];
+    for (let index = options.length - 1; index > 0; index--) {
+      const j = Math.floor(Math.random() * (index + 1));
+      [options[index], options[j]] = [options[j], options[index]];
     }
     return options;
   }

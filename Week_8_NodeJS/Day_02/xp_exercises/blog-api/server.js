@@ -27,7 +27,7 @@ app.get("/posts", (req, res) => {
 
 // GET /posts/:id: Return a specific blog post based on its id.
 
-app.get("/posts/:id", (req, res) => {
+app.get("/posts/id", (req, res) => {
   const postId = parseInt(req.params.id);
   const post = data.find(post => post.id === postId);
 // Implement error handling for invalid routes and server errors.
@@ -35,8 +35,6 @@ app.get("/posts/:id", (req, res) => {
     res.status(404).json({ error: "The requested post is not found on the server" });
     return;
   }
-  
-
   res.json(post);
 });
 
@@ -51,7 +49,7 @@ app.post("/posts", (req, res) => {
 
 // PUT /posts/:id: Update an existing blog post.
 
-app.put("/posts/:id", (req, res) => {
+app.put("/posts/id", (req, res) => {
   const postId = parseInt(req.params.id);
   const postIndex = data.findIndex(post => post.id === postId);
 // Implement error handling for invalid routes and server errors.
@@ -68,7 +66,7 @@ app.put("/posts/:id", (req, res) => {
 
 // DELETE /posts/:id: Delete a blog post.
 
-app.delete("/posts/:id", (req, res) => {
+app.delete("/posts/id", (req, res) => {
   const postId = parseInt(req.params.id);
   data = data.filter(post => post.id !== postId);
   res.json({ message: "The post is deleted successfully" });
