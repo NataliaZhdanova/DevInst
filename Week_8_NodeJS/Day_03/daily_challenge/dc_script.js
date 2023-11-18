@@ -11,19 +11,21 @@
 // 5. Provide appropriate feedback on correct and incorrect answers.
 // 6. Implement simple game logic such as displaying the next question after answering one.
 
-// Sample trivia quiz questions and answers (hard-coded for simplicity)
 
-// const triviaQuestions = [
-//   {
-//     question: "What is the capital of France?",
-//     answer: "Paris",
-//   },
-//   {
-//     question: "Which planet is known as the Red Planet?",
-//     answer: "Mars",
-//   },
-//   {
-//     question: "What is the largest mammal in the world?",
-//     answer: "Blue whale",
-//   },
-// ];
+import express from "express";
+import router from "./routes/index.js";
+
+const app = express();
+const port = 9000;
+
+app.use(express.static("public"));
+
+app.use(express.json());
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+
+app.use("/quiz", router);
+
+
