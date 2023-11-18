@@ -1,53 +1,22 @@
-// 🌟 Exercise 1 : Comparison
-// Instructions
-// Create a function called compareToTen(num) that takes a number as an argument.
-// The function should return a Promise:
-// the promise resolves if the argument is less than or equal to 10
-// the promise rejects if argument is greater than 10.
+// 🌟 Exercise 1: Creating A Simple Express.Js Application With Routes
 
-function compareToTen(num) {
-    let prom = new Promise((resolve, reject) => {
-        if (num <= 10) {
-            resolve(`${num} is less than or equal to 10`);
-        } else {
-            reject(`${num} is greater than 10`);
-        }
-    });
-    prom.then(value => {
-        console.log("OK: " + value );
-    })
-    .catch(error => console.error("Error: " + error));
-}
+import express from "express";
+import router from "./routes/index.js";
+import todoRouter from "./routes/todo.js";
+import bookRouter from "./routes/books.js";
 
-compareToTen(9);
-compareToTen(20);
+const app = express();
+const port = 9000;
 
+app.use(express.json());
 
-// 🌟 Exercise 2 : Promises
-// Instructions
-// Create a promise that resolves itself in 4 seconds and returns a “success” string.
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
 
-let prom1 = new Promise((resolve, reject) => {
-    setTimeout(resolve => console.log("Success..."), 4000);
-})
+app.use("/", router);
+app.use("/todos", todoRouter);
+app.use("/books", bookRouter);
 
-// 🌟 Exercise 3 : Resolve & Reject
-// Instructions
-// Use Promise.resolve(value) to create a promise that will resolve itself with a value of 3.
-// Use Promise.reject(error) to create a promise that will reject itself with the string “Boo!”
-
-const promise1 = Promise.resolve(3);
-const promise2 = Promise.reject("Boo!");
-
-// promise1.then(value => {
-//   console.log("Promise resolved with value:", value);
-// }).catch(error => {
-//   console.error("Error occurred:", error);
-// });
-
-// promise2.then(value => {
-//   console.log("Promise resolved with value:", value);
-// }).catch(error => {
-//   console.error("Error occurred:", error);
-// });
-
+// 🌟 Exercise 2: Simple To-Do List Exercise Using Express.Js And Express.Router.
+// 🌟 Exercise 3: Basic API For Managing A List Of Books Using Express.Js And Express.Router.

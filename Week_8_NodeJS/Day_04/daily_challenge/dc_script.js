@@ -1,44 +1,38 @@
-// Use this Giphy API Random documentation. Use this API Key : hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
-// In the HTML file, add a form, containing an input and a button. This input is used to fetch gif depending on a specific category.
-// In the JS file, create a program to fetch one random gif depending on the search of the user (ie. If the search is “sun”, append on the page one gif with a category of “sun”).
-// The gif should be appended with a DELETE button next to it. Hint : to find the URL of the gif, look for the sub-object named “images” inside the data you receive from the API.
-// Allow the user to delete a specific gif by clicking the DELETE button.
-// Allow the user to remove all of the GIFs by clicking a DELETE ALL button.
+// Instructions : Create A User Management API With Registration And Login Using Express.Js, Bcrypt, And Database
+// Requirements:
 
-const apiKey = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
-const gifForm = document.getElementById("gifForm");
-const searchInput = document.getElementById("searchInput");
-const gifContainer = document.getElementById("gifContainer");
-const deleteAllButton = document.getElementById("deleteAllButton");
-
-gifForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const searchTerm = searchInput.value;
-  const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${searchTerm}`;
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    const gifUrl = data.data.images.original.url;
-
-    const gifDiv = document.createElement("div");
-    const gifImg = document.createElement("img");
-    const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    gifImg.src = gifUrl;
-
-    deleteButton.addEventListener("click", () => {
-      gifContainer.removeChild(gifDiv);
-    });
-
-    gifDiv.appendChild(gifImg);
-    gifDiv.appendChild(deleteButton);
-    gifContainer.appendChild(gifDiv);
-  } catch (error) {
-    console.error("We could't fetch a gif...", error);
-  }
-});
+// Set up a new Express.js application.
 
 
-deleteAllButton.addEventListener("click", () => {
-  gifContainer.innerHTML = '';
-});
+// Implement the following routes using express.Router:
+
+// POST /register: Allow users to register by providing a username and password. Hash the password using bcrypt before storing it in the the database
+// POST /login: Allow users to login by providing their username and password. Compare the hashed password from the JSON file with the provided password.
+// GET /users: Retrieve a list of all registered users from the database
+// GET /users/:id: Retrieve a specific user by ID from the database
+// PUT /users/:id: Update a user’s information by ID in the database
+
+// Create users table to store user data.
+
+
+// Define a two data tables users and hashpwd to store user details:
+
+// users table with properties like id, email, username, first_name, last_name.
+// hashpwd table with properties like id, username, password.
+
+// Use transaction to add a user
+
+
+// Create this directory structure:
+
+// server
+//     |_ config
+//     |_ controllers
+//     |_ models
+//     |_ routes
+
+
+// Use bcrypt to hash user passwords before storing them in the table and for verifying passwords during login.
+
+
+// Test your API using tools like Postman or curl.
