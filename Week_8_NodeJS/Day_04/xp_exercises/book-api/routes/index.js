@@ -46,7 +46,6 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const { title, author, publishedYear } = req.body;
-  console.log(req.body);
   try {
     db("books")
     .insert({ title: title, author: author, publishedyear: publishedYear }, ["title", "author", "publishedyear"])
