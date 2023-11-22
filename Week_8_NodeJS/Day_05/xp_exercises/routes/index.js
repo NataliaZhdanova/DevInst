@@ -1,7 +1,6 @@
 import express from "express";
 const router = express.Router();
 import { promises as fs } from "fs";
-// import fs from "fs";
 import path from "path";
 import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
@@ -24,7 +23,6 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-
 
 router.get("/:id", async (req, res) => {
   const taskId = req.params.id;

@@ -3,33 +3,27 @@
    <head>
       <meta charset='utf-8'>
       <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-      <title>Currency converter</title>
+      <title>Register</title>
       <meta name='viewport' content='width=device-width, initial-scale=1'>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-      <link rel='stylesheet' type='text/css' media='screen' href='/Week_7_JS/Day_05/daily_challenge/main.css'>
+      <link rel='stylesheet' type='text/css' href='main.css'>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   </head>
  <body>
-   <div class="converter-container">
-      <label for="fromCurrency">From:</label>
-      <select id="fromCurrency"></select>
-  
-      <label for="toCurrency">To:</label>
-      <select id="toCurrency"></select>
-  
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount" />
-  
-      <button id="convertBtn">Convert</button>
-      <button id="switchBtn">Switch</button>
-  
-      <div id="result"></div>
-    </div>
+    <form id="register" action="/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="usernameReg" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="passwordReg" name="password" required>
+        <br>
+        <button id="submitReg" type="submit">Register</button>
+    </form>
+    <div id="feedback"></div>
 
-
-    <script type="text/javascript" src="dc_script.js"></script> 
+    <script type="text/javascript" src="reg_script.js"></script> 
 
  </body>
 </html>
