@@ -8,19 +8,19 @@ import img4 from "./c1cklkyp6ms02tougufx.webp";
 function App() {
   return (
       <Carousel>
-          <div class="carousel carousel-slider">
+          <div>
               <img src={img1} />
               <p className="legend">Hong Kong</p>
           </div>
-          <div class="carousel carousel-slider">
+          <div>
               <img src={img2} />
               <p className="legend">Las Vegas</p>
           </div>
-          <div class="carousel carousel-slider">
+          <div>
               <img src={img3} />
               <p className="legend">Japan</p>
           </div>
-          <div class="carousel carousel-slider">
+          <div>
               <img src={img4} />
               <p className="legend">Macao</p>
           </div>
