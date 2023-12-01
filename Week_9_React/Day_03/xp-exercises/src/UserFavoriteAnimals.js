@@ -12,7 +12,7 @@ function UserFavoriteAnimals() {
           <h2>User's Favorite Animals</h2>
           <ul>
             {user.favAnimals.map((animal, index) => (
-              <li id={index}>{animal}</li>
+              <li key={index}>{animal}</li>
             ))}
           </ul>
         </div>
