@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 function App() {
-  const [num1, setNum1] = useState('');
-  const [num2, setNum2] = useState('');
-  const [operation, setOperation] = useState('add');
-  const [result, setResult] = useState('');
+  const [num1, setNum1] = useState("");
+  const [num2, setNum2] = useState("");
+  const [operation, setOperation] = useState("add");
+  const [result, setResult] = useState("");
 
   const handleNum1Change = (e) => {
     setNum1(e.target.value);
@@ -18,25 +18,25 @@ function App() {
     setOperation(e.target.value);
   };
 
-  const calculateResult = () => {
+  function calculateResult() {
     const number1 = parseFloat(num1);
     const number2 = parseFloat(num2);
 
     switch (operation) {
-      case 'add':
+      case "add":
         setResult(number1 + number2);
         break;
-      case 'subtract':
+      case "subtract":
         setResult(number1 - number2);
         break;
-      case 'multiply':
+      case "multiply":
         setResult(number1 * number2);
         break;
-      case 'divide':
+      case "divide":
         setResult(number1 / number2);
         break;
       default:
-        setResult('Invalid operation');
+        setResult("Invalid operation");
     }
   };
 
@@ -63,7 +63,7 @@ function App() {
         </select>
       </label>
       <br />
-      <button onClick={calculateResult}>Add Them</button>
+      <button onClick={calculateResult}>Calculate!</button>
       <br />
       <p>Result: {result}</p>
     </div>
